@@ -81,7 +81,7 @@ class TasksController extends Controller
     public function complete(Request $request, $id)//Tasks $tasks
     {
         $tasks = Tasks::find($id);
-        $tasks->is_complited = $request->is_complited;//??? done
+        $tasks->is_completed = $request->is_completed;//??? done
         $tasks->save();
 
         return TasksResource::make($tasks);
